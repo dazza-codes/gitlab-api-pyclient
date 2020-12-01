@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "gitlab-api"
+version = "0.1.0"
+description = ""
+authors = ["Darren Weber <dweber.consulting@gmail.com>"]
+
+include = ["gitlab_api/**/*"]
+exclude = ["tests/**/*"]
+
+packages = [
+    {include = "gitlab_api"}
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+python-dotenv = "^0.13.0"
+aiohttp = "^3.6.2"
+
+
+[tool.poetry.dev-dependencies]
+autopep8 = "*"
+black = "^19.10b0"
+flake8 = "*"
+flake8-type-annotations = "*"
+ipdb = "*"
+pre-commit = "^2.4.0"
+
+# docs
+doc8 = "*"
+sphinx = "^2.0"
+sphinx-autoapi = "*"
+sphinx-autodoc-typehints = "*"
+sphinx-rtd-theme = "*"
+
+# packaging
+invoke-release = "*"
+setuptools = "*"
+tox = "*"
+twine = "*"
+wheel = "^0.31.1"
+
+# tests
+mypy = "*"
+pylint = "*"
+pytest = "^5.0"
+pytest-cov = "^2.0"
+pytest-datadir = "^1.0"
+pytest-mock = "^3.0"
+pytest-profiling = "*"
+pytest-randomly = "^3.0"
+pytest-vcr = "^1.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
